@@ -17,5 +17,11 @@ spring:
       hibernate:
         format_sql: true
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "prometheus"
+
 logging.level:
   org.hibernate.SQL: debug

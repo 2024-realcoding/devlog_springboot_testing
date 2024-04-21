@@ -29,6 +29,9 @@ dependencies {
     implementation("com.h2database:h2")
 
     testImplementation ("org.springframework.restdocs:spring-restdocs-mockmvc")
+    // actuator
+    implementation("org.springframework.boot:spring-boot-starter-actuator")
+    runtimeOnly ("io.micrometer:micrometer-registry-prometheus")
 }
 
 tasks.withType<Test> {
