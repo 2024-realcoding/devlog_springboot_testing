@@ -21,8 +21,8 @@ public class PostServiceWithSpringTest {
     @DisplayName("Spring 테스트 코드로 Spring Component 실행해보기")
     @Test
     void testDoCodeRun() {
-        PostRequest normalPostRequest = PostFixture.getNormalPostRequest();
-        Post post = postService.createPost(normalPostRequest);
-        assertThat(post).isNotNull();
+        PostRequest normalPostRequest = PostFixture.getNormalPostRequest();// given
+        Post post = postService.createPost(normalPostRequest); // when
+        assertThat(post).isNotNull(); // then
     }
 }

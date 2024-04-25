@@ -22,10 +22,10 @@ public class PostService {
     public List<Post> getPosts() {
         return postRepository.findAll();
     }
-    private final List<String> slangs = List.of("비속어1", "비속어2");
+    private final List<String> slangList = List.of("비속어1", "비속어2");
 
     public Post createPost(PostRequest postRequest) {
-        if (postValidService.isSlangInclude(slangs, postRequest.title(), postRequest.contents())){
+        if (postValidService.isSlangInclude(slangList, postRequest.title(), postRequest.contents())){
             throw new SlangBadRequestException();
         }
         return postRepository.save(new Post(
