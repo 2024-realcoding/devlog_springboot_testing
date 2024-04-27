@@ -20,8 +20,9 @@ spring:
         format_sql: true
 logging:
   pattern:
-    level: "trace_id=%mdc{trace_id} span_id=%mdc{span_id} trace_flags=%mdc{trace_flags} %p"
-
+    level: "trace_id=%mdc{trace_id} span_id=%mdc{span_id} trace_flags=%mdc{trace_flags} %p %F %c %m"
+  level:
+    com.cnu.com.cnu.devlog_springboot: DEBUG
 management:
   endpoints:
     web:

@@ -16,7 +16,8 @@ import java.util.Random;
 public class InfraController {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
     @GetMapping
-    public String root(@RequestParam(value = "name", defaultValue = "World") String name, @RequestHeader HttpHeaders headers) {
+    public String root(@RequestParam(value = "name", defaultValue = "World") String name,
+                       @RequestHeader HttpHeaders headers) {
         logger.error(headers.toString());
         logger.error(String.format("Hello %s!!", name));
         logger.debug("Debugging log");
