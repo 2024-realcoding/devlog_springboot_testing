@@ -32,7 +32,8 @@ dependencies {
     // actuator
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("io.opentelemetry:opentelemetry-api")
-    runtimeOnly ("io.micrometer:micrometer-registry-prometheus")
+
+    implementation ("io.micrometer:micrometer-registry-prometheus")
 }
 
 tasks.withType<Test> {
