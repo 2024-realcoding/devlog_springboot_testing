@@ -34,6 +34,7 @@ dependencies {
     implementation("io.opentelemetry:opentelemetry-api")
 
     implementation ("io.micrometer:micrometer-registry-prometheus")
+    implementation ("com.slack.api:slack-api-client:1.29.0")
 }
 
 tasks.withType<Test> {

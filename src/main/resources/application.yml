@@ -27,7 +27,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: prometheus
+        include: '*'
   metrics:
     tags:
       application: app
@@ -36,6 +36,10 @@ management:
         http:
           server:
             requests: 'true'
+
+slack:
+  webhook:
+    url: 'https://hooks.slack.com/services/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'
 
 logging.level:
   org.hibernate.SQL: debug

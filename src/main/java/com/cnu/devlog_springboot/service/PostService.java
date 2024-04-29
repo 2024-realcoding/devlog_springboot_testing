@@ -22,7 +22,7 @@ public class PostService {
     public List<Post> getPosts() {
         return postRepository.findAll();
     }
-    private final List<String> slangList = List.of("비속어1", "비속어2");
+    private final List<String> slangList = List.of("비속어", "비속어1", "비속어2");
 
     public Post createPost(PostRequest postRequest) {
         if (postValidService.isSlangInclude(slangList, postRequest.title(), postRequest.contents())){
