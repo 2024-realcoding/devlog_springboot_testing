@@ -39,7 +39,7 @@ management:
 
 slack:
   webhook:
-    url: 'https://hooks.slack.com/services/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'
+    url: 'https://hooks.slack.com/services/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'
 
 logging.level:
   org.hibernate.SQL: debug

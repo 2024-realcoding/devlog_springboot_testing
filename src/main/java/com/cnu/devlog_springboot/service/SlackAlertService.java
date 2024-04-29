@@ -52,7 +52,7 @@ public class SlackAlertService {
                                 generateSlackField("Request IP", xffHeader == null ? request.getRemoteAddr() : xffHeader),
                                 generateSlackField("Request URL", request.getRequestURL() + " " + request.getMethod())
 //                                generateSlackField("Error Code", e.getErrorCode().getStatus().toString()),
-//                                generateSlackField("Error Message", e.getErrorCode().getMessage())
+//                                generateSlackField("Error Message", e.getLocalizedMessage())
                         )
                 )
                 .build();
